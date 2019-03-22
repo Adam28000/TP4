@@ -143,6 +143,44 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\FichiersTP4 (1)\source\Boisson.cpp" />
+    <ClCompile Include="..\..\FichiersTP4 (1)\source\Client.cpp" />
+    <ClCompile Include="..\..\FichiersTP4 (1)\source\ClientOccasionnel.cpp" />
+    <ClCompile Include="..\..\FichiersTP4 (1)\source\ClientPrestige.cpp" />
+    <ClCompile Include="..\..\FichiersTP4 (1)\source\ClientRegulier.cpp" />
+    <ClCompile Include="..\..\FichiersTP4 (1)\source\LectureFichierEnSections.cpp" />
+    <ClCompile Include="..\..\FichiersTP4 (1)\source\main.cpp" />
+    <ClCompile Include="..\..\FichiersTP4 (1)\source\Menu.cpp" />
+    <ClCompile Include="..\..\FichiersTP4 (1)\source\Plat.cpp" />
+    <ClCompile Include="..\..\FichiersTP4 (1)\source\PlatBio.cpp" />
+    <ClCompile Include="..\..\FichiersTP4 (1)\source\PlatBioVege.cpp" />
+    <ClCompile Include="..\..\FichiersTP4 (1)\source\PlatVege.cpp" />
+    <ClCompile Include="..\..\FichiersTP4 (1)\source\Restaurant.cpp" />
+    <ClCompile Include="..\..\FichiersTP4 (1)\source\Table.cpp" />
+    <ClCompile Include="..\..\FichiersTP4 (1)\source\Vege.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\FichiersTP4 (1)\source\Boisson.h" />
+    <ClInclude Include="..\..\FichiersTP4 (1)\source\Client.h" />
+    <ClInclude Include="..\..\FichiersTP4 (1)\source\ClientOccasionnel.h" />
+    <ClInclude Include="..\..\FichiersTP4 (1)\source\ClientPrestige.h" />
+    <ClInclude Include="..\..\FichiersTP4 (1)\source\ClientRegulier.h" />
+    <ClInclude Include="..\..\FichiersTP4 (1)\source\debogageMemoire.hpp" />
+    <ClInclude Include="..\..\FichiersTP4 (1)\source\def.h" />
+    <ClInclude Include="..\..\FichiersTP4 (1)\source\LectureFichierEnSections.h" />
+    <ClInclude Include="..\..\FichiersTP4 (1)\source\Menu.h" />
+    <ClInclude Include="..\..\FichiersTP4 (1)\source\Plat.h" />
+    <ClInclude Include="..\..\FichiersTP4 (1)\source\PlatBio.h" />
+    <ClInclude Include="..\..\FichiersTP4 (1)\source\PlatBioVege.h" />
+    <ClInclude Include="..\..\FichiersTP4 (1)\source\PlatVege.h" />
+    <ClInclude Include="..\..\FichiersTP4 (1)\source\pointers.h" />
+    <ClInclude Include="..\..\FichiersTP4 (1)\source\Restaurant.h" />
+    <ClInclude Include="..\..\FichiersTP4 (1)\source\Table.h" />
+    <ClInclude Include="..\..\FichiersTP4 (1)\source\Taxable.h" />
+    <ClInclude Include="..\..\FichiersTP4 (1)\source\Vege.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\..\FichiersTP4 (1)\source\polyFood.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
