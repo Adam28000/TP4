@@ -41,4 +41,9 @@ void Vege::afficherVege(ostream & os) const
 {   //TODO
 }
 
+double Vege::calculerApportNutritif() const
+{
+	return 0.0;
+}
+
 

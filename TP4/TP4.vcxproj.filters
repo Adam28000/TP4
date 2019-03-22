@@ -15,110 +15,110 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\FichiersTP4 (1)\source\Boisson.cpp">
+    <ClCompile Include="source\Boisson.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\FichiersTP4 (1)\source\Client.cpp">
+    <ClCompile Include="source\Client.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\FichiersTP4 (1)\source\ClientOccasionnel.cpp">
+    <ClCompile Include="source\ClientOccasionnel.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\FichiersTP4 (1)\source\ClientPrestige.cpp">
+    <ClCompile Include="source\ClientPrestige.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\FichiersTP4 (1)\source\ClientRegulier.cpp">
+    <ClCompile Include="source\ClientRegulier.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\FichiersTP4 (1)\source\LectureFichierEnSections.cpp">
+    <ClCompile Include="source\LectureFichierEnSections.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\FichiersTP4 (1)\source\main.cpp">
+    <ClCompile Include="source\main.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\FichiersTP4 (1)\source\Menu.cpp">
+    <ClCompile Include="source\Menu.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\FichiersTP4 (1)\source\Plat.cpp">
+    <ClCompile Include="source\Plat.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\FichiersTP4 (1)\source\PlatBio.cpp">
+    <ClCompile Include="source\PlatBio.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\FichiersTP4 (1)\source\PlatBioVege.cpp">
+    <ClCompile Include="source\PlatBioVege.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\FichiersTP4 (1)\source\PlatVege.cpp">
+    <ClCompile Include="source\PlatVege.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\FichiersTP4 (1)\source\Restaurant.cpp">
+    <ClCompile Include="source\Restaurant.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\FichiersTP4 (1)\source\Table.cpp">
+    <ClCompile Include="source\Table.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\FichiersTP4 (1)\source\Vege.cpp">
+    <ClCompile Include="source\Vege.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\FichiersTP4 (1)\source\Boisson.h">
+    <ClInclude Include="source\Boisson.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\FichiersTP4 (1)\source\Client.h">
+    <ClInclude Include="source\Client.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\FichiersTP4 (1)\source\ClientOccasionnel.h">
+    <ClInclude Include="source\ClientOccasionnel.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\FichiersTP4 (1)\source\ClientPrestige.h">
+    <ClInclude Include="source\ClientPrestige.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\FichiersTP4 (1)\source\ClientRegulier.h">
+    <ClInclude Include="source\ClientRegulier.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\FichiersTP4 (1)\source\def.h">
+    <ClInclude Include="source\debogageMemoire.hpp">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\FichiersTP4 (1)\source\debogageMemoire.hpp">
+    <ClInclude Include="source\def.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\FichiersTP4 (1)\source\LectureFichierEnSections.h">
+    <ClInclude Include="source\LectureFichierEnSections.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\FichiersTP4 (1)\source\Menu.h">
+    <ClInclude Include="source\Menu.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\FichiersTP4 (1)\source\Plat.h">
+    <ClInclude Include="source\Plat.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\FichiersTP4 (1)\source\PlatBio.h">
+    <ClInclude Include="source\PlatBio.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\FichiersTP4 (1)\source\PlatBioVege.h">
+    <ClInclude Include="source\PlatBioVege.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\FichiersTP4 (1)\source\PlatVege.h">
+    <ClInclude Include="source\PlatVege.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\FichiersTP4 (1)\source\pointers.h">
+    <ClInclude Include="source\pointers.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\FichiersTP4 (1)\source\Restaurant.h">
+    <ClInclude Include="source\Restaurant.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\FichiersTP4 (1)\source\Table.h">
+    <ClInclude Include="source\Taxable.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\FichiersTP4 (1)\source\Taxable.h">
+    <ClInclude Include="source\Table.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\FichiersTP4 (1)\source\Vege.h">
+    <ClInclude Include="source\Vege.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="..\..\FichiersTP4 (1)\source\polyFood.txt">
+    <Text Include="source\polyFood.txt">
       <Filter>Fichiers sources</Filter>
     </Text>
   </ItemGroup>

@@ -9,6 +9,11 @@ PlatBioVege::PlatBioVege(string nom, double prix, double cout, double ecotaxe, d
 }
 PlatBioVege:: ~PlatBioVege(){}
 
+Plat * PlatBioVege::clone() const
+{
+	return nullptr;
+}
+
 //TODO
 void PlatBioVege::afficherPlat(ostream & os) const
 {   //TODO

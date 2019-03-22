@@ -35,8 +35,18 @@ void Client:: setTable(Table * ta)
 Table * Client:: getTable() const
 { return tableOccupee_;}
 
+int Client::getNbPoints() const
+{
+	return 0;
+}
+
 void Client::afficherClient(ostream & os) const
 { // TODO
 
+}
+
+double Client::getReduction(const Restaurant & res, double montant, bool estLivraison)
+{
+	return 0.0;
 }
 
