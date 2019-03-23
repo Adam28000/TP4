@@ -4,20 +4,22 @@
 */
 #include "ClientOccasionnel.h"
 
-ClientOccasionnel::ClientOccasionnel(string_view nom, string_view prenom, int tailleGroupe)
-{ // TODO
+ClientOccasionnel::ClientOccasionnel(string_view nom, string_view prenom, int tailleGroupe) :Client(nom, prenom, tailleGroupe)
+{ 
 }
 ClientOccasionnel::~ClientOccasionnel(){}
 
 int ClientOccasionnel::getNbPoints() const
 {
-        //TODO
+	return 0; //Car aucunn point
 }
 
 void ClientOccasionnel::afficherClient(ostream & os) const
 {
-        //TODO
+	Client::afficherClient(os); // Affichage de client
 
 }
 double ClientOccasionnel::getReduction(const Restaurant & res, double montant, bool estLivraison)
-{ // TODO}
+{
+	return 0.0; //Aucun reduction
+}
