@@ -22,7 +22,7 @@ public:
 
 protected:
 
-	double taxe_
+	double taxe_;
 
 };
 #endif

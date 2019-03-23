@@ -50,4 +50,6 @@ double ClientPrestige :: getReduction(const Restaurant & res, double montant , b
 	double reduc = (-montant * TAUX_REDUC_PRESTIGE);
 	if (nbPoints_ < SEUIL_LIVRAISON_GRATUITE && estLivraison) {
 		reduc += res.getFraisLivraison(adresse_);
+	}
+	return reduc;
 }
