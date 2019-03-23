@@ -41,8 +41,14 @@ int Client::getNbPoints() const
 }
 
 void Client::afficherClient(ostream & os) const
-{ // TODO
-
+{ 
+	os << "Nom " << nom_ << " Prenom " << prenom_;
+	if (tableOccupee_ != nullptr) {
+		os << " a une place dans la table " << tableOccupee_->getId() << endl;
+	}
+	else{
+		os << "n'a pas de place au restaurant" << endl;
+	}
 }
 
 double Client::getReduction(const Restaurant & res, double montant, bool estLivraison)
