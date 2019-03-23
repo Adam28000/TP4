@@ -7,7 +7,7 @@
 #include "PlatBio.h"
 #include "PlatVege.h"
 #include "PlatBioVege.h"
-//#include "debogageMemoire.hpp"
+#include "debogageMemoire.hpp"
 using namespace std;
 
 Plat::Plat(string_view nom, double prix, double cout) : nom_(nom), prix_(prix), cout_(cout) {
@@ -43,13 +43,14 @@ bool Plat::operator < (const Plat& plat) const
 }
 
 void Plat::afficherPlat(ostream & os) const
-{ // TODO
-  
+{ 
+	os << "PLAT ----" << nom_ << " " << prix_ << "$" << "(" << cout_ << "$ pour le restaurant)" << endl;
 }
 double Plat::getPrixRevient()
 {  return prix_ - cout_;
     
 }
  Plat *  Plat:: clone () const
-{ //TODO
+{ 
+	 return new Plat(nom_, prix_, cout_);
 }
