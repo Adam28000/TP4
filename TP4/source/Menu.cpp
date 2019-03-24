@@ -23,7 +23,7 @@ Menu::Menu(string fichier, TypeMenu type) :
 
 Menu::~Menu()
 {
-	for (int i = 0; i < listePlats_.size(); i++)
+	for (unsigned i = 0; i < listePlats_.size(); i++)
 	{																		//On supprime les anciens plats dans les vecteurs du menu en question // pas besoin de faire une boucle de desaloccation dans le vecteur listePltasVege car ces pointeurs sont aussi dans listePlats
 		delete listePlats_[i];
 	}
@@ -41,7 +41,7 @@ Menu::Menu(const Menu & menu) : type_(menu.type_)
 {
 	if (this != &menu)
 	{
-		for (int i = 0; i < menu.listePlats_.size(); i++)
+		for (unsigned i = 0; i < menu.listePlats_.size(); i++)
 		{
 			if (dynamic_cast<PlatBioVege*>(menu.listePlats_[i]))
 			{																
@@ -74,7 +74,7 @@ Menu & Menu::operator=(const Menu & menu)
 	{
 		type_ = menu.type_;
 
-		for (int i = 0; i < listePlats_.size(); i++)
+		for (unsigned i = 0; i < listePlats_.size(); i++)
 		{																		//On supprime les anciens plats dans les vecteurs du menu en question  pas besoin de faire une boucle de desaloccation dans le vecteur listePltasVege car ces pointeurs sont aussi dans listePlats
 			delete listePlats_[i];
 		}
@@ -82,7 +82,7 @@ Menu & Menu::operator=(const Menu & menu)
 		listePlats_.clear();
 		listePlatsVege_.clear();
 
-		for (int i = 0; i < menu.listePlats_.size(); i++)
+		for (unsigned i = 0; i < menu.listePlats_.size(); i++)
 		{
 			if (dynamic_cast<PlatBioVege*>(menu.listePlats_[i]))
 			{
@@ -201,12 +201,12 @@ Plat* Menu::lirePlatDe(LectureFichierEnSections& fichier)
 
 ostream& operator<<(ostream& os, const Menu& menu)
 {   
-	for (int i= 0; i < menu.listePlats_.size(); ++i) {
+	for (unsigned i= 0; i < menu.listePlats_.size(); ++i) {
 		menu.listePlats_[i]->afficherPlat(os);
 	}
 	os << endl;
 	os<< "MENU ENTIEREMENT VEGETARIEN " << endl;
-	for (int i = 0; i < menu.listePlatsVege_.size(); ++i) {
+	for (unsigned i = 0; i < menu.listePlatsVege_.size(); ++i) {
 		menu.listePlatsVege_[i]->afficherVege(os);
 	}
 	return os;
