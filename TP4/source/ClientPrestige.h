@@ -12,16 +12,15 @@ class ClientPrestige : public ClientRegulier
 {
 public:
 	ClientPrestige();
-	ClientPrestige(string_view nom, string_view prenom, int tailleGroupe, 
-		           int nbPoints, ZoneHabitation adresse);// TODO
-     ~ClientPrestige(){};
+	ClientPrestige(string_view nom, string_view prenom, int tailleGroupe, int nbPoints, ZoneHabitation adresse);// TODO
+    virtual ~ClientPrestige(){};
 	//Accesseur 
 	ZoneHabitation getAdresseCode() const;
 
 	//Autres Fonctions
     void afficherClient(ostream & os) const override;// TODO
 	string getAdressCodeString() const;
-    double getReduction(const Restaurant & res, double montant, bool estLivraison)override; //TODO
+    double getReduction(const Restaurant & res, double montant, bool estLivraison) override; //TODO
 
 private:
 	ZoneHabitation adresse_;

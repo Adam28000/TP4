@@ -11,14 +11,14 @@
 #include <string>
 #include <string_view>
 using namespace std;
-class Boisson : public Taxable
+class Boisson  : public Taxable
 {
  public:
-	 Boisson(string_view nom, double prix);
-	 string_view getNom() const;
-	 double getPrix() const;
-	 virtual void setTaxe();
-	 virtual double getTaxe()const;
+    Boisson (string_view nom, double prix);
+    string_view getNom() const;
+    double getPrix () const;
+	virtual void setTaxe();
+	virtual double getTaxe()const;
 protected:
     string nom_;
     double prix_;

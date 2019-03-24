@@ -42,5 +42,4 @@ double ClientRegulier::getReduction(const Restaurant & res, double montant, bool
 	{
 		return 0.0;
 	}
-	}
-	
+}

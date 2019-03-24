@@ -9,15 +9,14 @@
 #include <string>
 #include <iostream>
 #include "Plat.h"
-#include "debogageMemoire.hpp"
 
 using namespace std;
 
 class PlatBio: public Plat {
 public:
 	// constructeurs
-       PlatBio(string nom = "inconnu", double prix = 0,double cout = 0, double ecotaxe = 0);//TODO
-       virtual  ~ PlatBio();
+ PlatBio(string nom = "inconnu", double prix = 0,double cout = 0, double ecotaxe = 0);
+  virtual ~ PlatBio();
 	//getters 
 	double getEcoTaxe() const;
 	//setters 

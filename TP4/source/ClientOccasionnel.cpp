@@ -11,15 +11,15 @@ ClientOccasionnel::~ClientOccasionnel(){}
 
 int ClientOccasionnel::getNbPoints() const
 {
-	return 0; //Car aucunn point
+	return 0; //Pas de points
 }
 
 void ClientOccasionnel::afficherClient(ostream & os) const
 {
-	Client::afficherClient(os); // Affichage de client
+	Client::afficherClient(os);
 
 }
 double ClientOccasionnel::getReduction(const Restaurant & res, double montant, bool estLivraison)
 {
-	return 0.0; //Aucun reduction
+	return 0.0; //Pas de reduction
 }

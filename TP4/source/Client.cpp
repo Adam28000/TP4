@@ -35,24 +35,15 @@ void Client:: setTable(Table * ta)
 Table * Client:: getTable() const
 { return tableOccupee_;}
 
-int Client::getNbPoints() const
-{
-	return 0;
-}
-
 void Client::afficherClient(ostream & os) const
-{ 
+{
 	os << "Nom " << nom_ << " Prenom " << prenom_;
 	if (tableOccupee_ != nullptr) {
 		os << " a une place dans la table " << tableOccupee_->getId() << endl;
 	}
-	else{
+	else {
 		os << "n'a pas de place au restaurant" << endl;
 	}
-}
 
-double Client::getReduction(const Restaurant & res, double montant, bool estLivraison)
-{
-	return 0.0;
 }
 

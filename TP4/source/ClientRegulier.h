@@ -16,7 +16,7 @@ class ClientRegulier : public Client
 	ClientRegulier(string_view nom, string_view prenom, int tailleGroupe, int nbPoints);// TODO
     virtual ~ClientRegulier();
 	//Accesseurs
-     int getNbPoints() const ;
+     int getNbPoints() const override;
 
 	//Autres Methodes
 	void augmenterNbPoints(int bonus);

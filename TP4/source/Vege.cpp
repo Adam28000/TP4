@@ -43,5 +43,3 @@ void Vege::afficherVege(ostream & os) const
 }
 
 
-
-

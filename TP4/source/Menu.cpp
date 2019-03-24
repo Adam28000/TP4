@@ -24,13 +24,12 @@ Menu::Menu(string fichier, TypeMenu type) :
 Menu::~Menu()
 {
 	for (int i = 0; i < listePlats_.size(); i++)
-	{
+	{																		//On supprime les anciens plats dans les vecteurs du menu en question // pas besoin de faire une boucle de desaloccation dans le vecteur listePltasVege car ces pointeurs sont aussi dans listePlats
 		delete listePlats_[i];
 	}
-		
-	listePlatsVege_.clear();
-	listePlats_.clear();
 
+	listePlats_.clear();
+	listePlatsVege_.clear();
 }
 
 Plat* Menu::allouerPlat(Plat* plat) {
@@ -40,48 +39,71 @@ Plat* Menu::allouerPlat(Plat* plat) {
 
 Menu::Menu(const Menu & menu) : type_(menu.type_)
 {
-	if (this != &menu) {
-		for (int i = 0; i < menu.listePlats_.size(); i++) //Voir diagramme de classe
-			if (dynamic_cast<PlatBioVege*>(menu.listePlats_[i])) { // On push dans les deux vecteurs si le plat est Bio et Vege
+	if (this != &menu)
+	{
+		for (int i = 0; i < menu.listePlats_.size(); i++)
+		{
+			if (dynamic_cast<PlatBioVege*>(menu.listePlats_[i]))
+			{																
 				listePlats_.push_back(dynamic_cast<PlatBioVege*>(allouerPlat(menu.listePlats_[i])));
 				listePlatsVege_.push_back(dynamic_cast<PlatBioVege*>(listePlats_[i]));
 			}
-			else if (dynamic_cast<PlatBio*>(menu.listePlats_[i])) // On push dans plats seulement si plat est Bio
-				listePlats_.push_back(dynamic_cast<PlatBio*>(allouerPlat(menu.listePlats_[i])));
-			else if (dynamic_cast<PlatVege*>(menu.listePlats_[i])) {  // On push dans les deux vecteurs
+			else if (dynamic_cast<PlatVege*>(menu.listePlats_[i]))																// On met le plat dans les deux vecteurs si il est vege(Bio ou pas) 
+			{ 
 				listePlats_.push_back(dynamic_cast<PlatVege*>(allouerPlat(menu.listePlats_[i])));
 				listePlatsVege_.push_back(dynamic_cast<PlatVege*>(listePlats_[i]));
 			}
+			else if (dynamic_cast<PlatBio*>(menu.listePlats_[i]))															// On met jsute dans listePlats si il nest pas vege(Bio ou pas)
+			{
+				listePlats_.push_back(dynamic_cast<PlatBio*>(allouerPlat(menu.listePlats_[i])));
+			
+			}		
 			else
-				listePlats_.push_back(allouerPlat(menu.listePlats_[i])); // Il s'agit  d'un plat ordinaire
+			{
+				listePlats_.push_back(allouerPlat(menu.listePlats_[i]));
+			}
+		}
 	}
+
   
 }
 
 Menu & Menu::operator=(const Menu & menu)
 {
-	if (this != &menu) {
+	if (this != &menu) 
+	{
 		type_ = menu.type_;
 
 		for (int i = 0; i < listePlats_.size(); i++)
+		{																		//On supprime les anciens plats dans les vecteurs du menu en question  pas besoin de faire une boucle de desaloccation dans le vecteur listePltasVege car ces pointeurs sont aussi dans listePlats
 			delete listePlats_[i];
+		}
 
 		listePlats_.clear();
 		listePlatsVege_.clear();
 
-		for (int i = 0; i < menu.listePlats_.size(); i++)			//Voir diagramme de classe
-			if (dynamic_cast<PlatBioVege*>(menu.listePlats_[i])) {	// On push dans les deux vecteurs si le plat est Bio et Vege
+		for (int i = 0; i < menu.listePlats_.size(); i++)
+		{
+			if (dynamic_cast<PlatBioVege*>(menu.listePlats_[i]))
+			{
 				listePlats_.push_back(dynamic_cast<PlatBioVege*>(allouerPlat(menu.listePlats_[i])));
 				listePlatsVege_.push_back(dynamic_cast<PlatBioVege*>(listePlats_[i]));
 			}
-			else if (dynamic_cast<PlatBio*>(menu.listePlats_[i]))	// On push dans plats seulement si plat est Bio
-				listePlats_.push_back(dynamic_cast<PlatBio*>(allouerPlat(menu.listePlats_[i])));
-			else if (dynamic_cast<PlatVege*>(menu.listePlats_[i])) {
+			else if (dynamic_cast<PlatVege*>(menu.listePlats_[i]))																// On met le plat dans les deux vecteurs si il est vege(Bio ou pas) 
+			{
 				listePlats_.push_back(dynamic_cast<PlatVege*>(allouerPlat(menu.listePlats_[i])));
 				listePlatsVege_.push_back(dynamic_cast<PlatVege*>(listePlats_[i]));
 			}
+			else if (dynamic_cast<PlatBio*>(menu.listePlats_[i]))															// On met jsute dans listePlats si il nest pas vege(Bio ou pas)
+			{
+				listePlats_.push_back(dynamic_cast<PlatBio*>(allouerPlat(menu.listePlats_[i])));
+
+			}
 			else
-				listePlats_.push_back(allouerPlat(menu.listePlats_[i])); // Il s'agit d'un plat ordinaire
+			{
+				listePlats_.push_back(allouerPlat(menu.listePlats_[i]));
+			}
+		}
 	}
 	return *this;
 }
@@ -96,22 +118,28 @@ vector<Plat*> Menu::getListePlats() const
 // Autres methodes.
 
 Menu& Menu::operator+=(owner<Plat*> plat) {
-	if (dynamic_cast<Plat*>(plat) != nullptr) // s'assurer que le pointeur passée en parametre s'agit bien d'un plat
+        
+	if (dynamic_cast<Plat*>(plat) != nullptr) // On ssaure que cest bien un pointeur de plat
 	{
 
-		if (dynamic_cast<PlatBioVege*>(plat)) { // il s'agit d un plat vegetarien on push donc dans les deux vecteurs
+		if (dynamic_cast<PlatBioVege*>(plat)) 
+		{ 
 			listePlats_.push_back(dynamic_cast<PlatBioVege*>(plat));
 			listePlatsVege_.push_back(dynamic_cast<PlatBioVege*>(plat));
 		}
-		else if (dynamic_cast<PlatBio*>(plat)) {
-			listePlats_.push_back(dynamic_cast<PlatBio*>(plat));
-		}
-		else if (dynamic_cast<PlatVege*>(plat)) {  // il s'agit d un plat vegetarien on push donc dans les deux vecteurs
+		else if (dynamic_cast<PlatVege*>(plat))
+		{													                    	// Si cest Vege  on le met donc dans les deux vecteurs
 			listePlats_.push_back(dynamic_cast<PlatVege*>(plat));
 			listePlatsVege_.push_back(dynamic_cast<PlatVege*>(plat));
 		}
-		else
-			listePlats_.push_back(plat); // Il s'agit  d'un plat ordinaire
+		else if (dynamic_cast<PlatBio*>(plat))
+		{
+			listePlats_.push_back(dynamic_cast<PlatBio*>(plat));
+		}																		//Si cest pas Vege on met juste dans listePlats
+		else 
+		{
+			listePlats_.push_back(plat); 
+		}
 
 	}
 	return *this;
@@ -173,11 +201,12 @@ Plat* Menu::lirePlatDe(LectureFichierEnSections& fichier)
 
 ostream& operator<<(ostream& os, const Menu& menu)
 {   
-	for (unsigned i = 0; i < menu.listePlats_.size(); ++i) {
+	for (int i= 0; i < menu.listePlats_.size(); ++i) {
 		menu.listePlats_[i]->afficherPlat(os);
 	}
-	os << endl << "MENU ENTIEREMENT VEGETARIEN " << endl;
-	for (unsigned i = 0; i < menu.listePlatsVege_.size(); ++i) {
+	os << endl;
+	os<< "MENU ENTIEREMENT VEGETARIEN " << endl;
+	for (int i = 0; i < menu.listePlatsVege_.size(); ++i) {
 		menu.listePlatsVege_[i]->afficherVege(os);
 	}
 	return os;
